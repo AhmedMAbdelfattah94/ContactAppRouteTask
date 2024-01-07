@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameInputAdd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/contact_name"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/person_ic">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="30" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneInputAdd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        app:counterEnabled="true"
+        app:counterMaxLength="11"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red_color"
+        app:layout_constraintEnd_toEndOf="@id/nameInputAdd"
+        app:layout_constraintStart_toStartOf="@id/nameInputAdd"
+        app:layout_constraintTop_toBottomOf="@id/nameInputAdd"
+        app:startIconDrawable="@drawable/phone_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLength="11" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionInputAdd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/description_hint"
+        android:scrollbars="vertical"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:layout_constraintEnd_toEndOf="@id/phoneInputAdd"
+        app:layout_constraintStart_toStartOf="@id/phoneInputAdd"
+        app:layout_constraintTop_toBottomOf="@id/phoneInputAdd">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionEd"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:inputType="text"
+            android:maxLength="101" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/buttons_color"
+        android:padding="15dp"
+        android:text="@string/add_contacts_text"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionInputAdd" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
